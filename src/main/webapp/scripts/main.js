@@ -1,5 +1,6 @@
 function haeAutot(){
-	let url = "autot";
+	console.log("hakusana"+ document.getElementById("hakusana").value);
+	let url = "autot?hakusana=" + document.getElementById("hakusana").value;
 	let requestOptions = {
 		method: "GET",
 		headers: {"Content-Type": "application/x-www-form-urlencoded"}
@@ -7,7 +8,7 @@ function haeAutot(){
 	fetch (url, requestOptions)
 	.then(response => response.json())//muutetaan vastausteksti JSON-objektiksi
 	.then(response => printItems(response))
-	.catch(errosText => console.error("Fetch failed: " + errorText));
+	.catch(errorText => console.error("Fetch failed: " + errorText));
 }
 //Kirjoitetaan tiedot taulukkoon JSON-objektilistasta
 function printItems(respObjList){

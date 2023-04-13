@@ -11,6 +11,11 @@
 <table id="listaus">
 	<thead>
 		<tr>
+				<th>Hakusana:</th>
+				<th colspan="3"><input type="text" id="hakusana"></th>
+				<th><input type="button" value="hae" id="hakunappi" onclick="haeAutot()"></th>
+		</tr>
+		<tr>
 			<th>Rekisterinumero</th>
 			<th>Merkki</th>
 			<th>Malli</th>
@@ -23,7 +28,6 @@
 </table>
 <span id = "ilmo"></span>
 <script>
-//t‰m‰ tiedosto on view, t‰‰ll‰ ei koodata vaan l‰hinn‰ n‰ytet‰‰n dataa
 haeAutot();
 </script>
 </body>
